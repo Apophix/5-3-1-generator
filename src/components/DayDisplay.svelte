@@ -1,5 +1,6 @@
 <script>
 	import { getPlateString } from "../util/plates.js"
+	import { mRound } from "../util/round.js";
 	import { getContext } from "svelte";
 
 	export let dayData = {};
@@ -29,8 +30,8 @@
 					{#each week.weightData || [] as weightSet}
 						<tr>
 							<td>{weightSet.mult * 100 + "%"}</td>
-							<td>{trainingMax[chosenExerciseId] * weightSet.mult}</td>
-							<td>{getPlateString(trainingMax[chosenExerciseId] * weightSet.mult)}</td>
+							<td>{mRound(trainingMax[chosenExerciseId] * weightSet.mult)}</td>
+							<td>{getPlateString(mRound(trainingMax[chosenExerciseId] * weightSet.mult))}</td>
 							<td>{weightSet.sets}</td>
 							<td>{weightSet.reps}</td>
 						</tr>

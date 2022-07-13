@@ -1,0 +1,13 @@
+@mixin box-shadow($x: 0px, $y: 1px, $blur: 8px, $spread: 0px, $color: rgba(0, 0, 0, 0.6), $inset: false) {
+	@if $inset {
+		box-shadow: inset $x $y $blur $spread $color;
+	}
+
+	@else {
+		box-shadow: $x $y $blur $spread $color;
+	}
+}
+
+@mixin text-shadow() {
+    text-shadow: 0px 0px 4px black;
+}

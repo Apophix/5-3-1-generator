@@ -1,0 +1,87 @@
+@use "sass:color"; 
+
+:global {
+
+	@page { 
+		size: landscape; 
+	}
+
+	:root {
+		font-family: "Roboto", sans-serif;
+		font-size: 10px;
+	}
+
+	body {
+		height: 100%;
+	}
+
+	h1 {
+		font-size: 2.6rem;
+		line-height: normal;
+		font-family: $FONT-HEADING;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		line-height: normal;
+		font-family: $FONT-SUBHEADING;
+		font-weight: normal;
+	}
+
+	h3 {
+		font-family: $FONT-SUBHEADING;
+		font-size: 1.4rem;
+	}
+
+	button {
+		padding: 8px 16px;
+		background: $THEME-COLOR-DARK; 
+		border: none;
+		color: $THEME-COLOR-LIGHT;
+		font-family: $FONT-SUBHEADING;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+
+		transition: background-color 0.2s ease; 
+
+		@include box-shadow();
+
+		border-radius: 3px;
+
+		&.secondary 
+		{
+			padding: 6px 12px;
+			font-size: 1.4rem; 
+			background: $THEME-COLOR-DARKER; 
+		}
+
+		&.close 
+		{
+			background: none; 
+			font-size: 1rem; 
+			padding: 2px;
+			aspect-ratio: 1 / 1;
+			height: 24px;
+			margin: 0;
+			box-shadow: none;
+
+			&:hover {
+				background: $THEME-COLOR-ERROR; 
+			}
+
+			&:active {
+				background: color.adjust($THEME-COLOR-ERROR, $lightness: -30); 
+			}
+		}
+
+		&:hover {
+			background: $THEME-COLOR-ACCENT;
+		}
+
+		&:active {
+			transition: none; 
+			background: $THEME-COLOR-DARKEST;
+		}
+	}
+
+}

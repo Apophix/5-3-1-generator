@@ -1,0 +1,47 @@
+.click-through {
+    pointer-events: none;
+}
+
+.clickable {
+    pointer-events: auto;
+}
+
+.centerer {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.bottomer {
+    display: grid;
+    align-content: end;
+    justify-content: center;
+}
+
+.top-righter {
+	display: grid;
+    align-content: start;
+    justify-content: right;
+}
+
+.grd {
+    display: grid;
+}
+
+.center-self {
+    align-self: center;
+    justify-self: center;
+}
+
+.bottom-center-self {
+    align-self: end;
+    justify-self: center;
+}
+
+.stretched {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

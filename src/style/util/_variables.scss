@@ -1,0 +1,29 @@
+@use "sass:color"; 
+
+$THEME-OPTION-PURPLE: #7344b1; 
+$THEME-OPTION-RED: rgb(206, 44, 44); 
+$THEME-OPTION-BLUE: rgb(10, 148, 240); 
+
+$THEME-COLOR: $THEME-OPTION-PURPLE; 
+
+$adjustmentStep: 14; 
+
+$THEME-COLOR-BRIGHT: color.adjust($THEME-COLOR, $lightness: $adjustmentStep * 1);
+$THEME-COLOR-BRIGHTER: color.adjust($THEME-COLOR, $lightness: $adjustmentStep * 2);
+$THEME-COLOR-BRIGHTEST: color.adjust($THEME-COLOR, $lightness: $adjustmentStep * 3);
+
+$THEME-COLOR-DARK: color.adjust($THEME-COLOR, $lightness: -$adjustmentStep * 1);
+$THEME-COLOR-DARKER: color.adjust($THEME-COLOR, $lightness: -$adjustmentStep * 2);
+$THEME-COLOR-DARKEST: color.adjust($THEME-COLOR, $lightness: -$adjustmentStep * 3);
+
+$THEME-COLOR-LIGHT: #ECF0F1; 
+$THEME-COLOR-ACCENT: $THEME-COLOR;
+
+$THEME-COLOR-ERROR: #E53935; 
+
+$FONT-HEADING: "Teko", sans-serif; 
+$FONT-NORMAL: "Roboto", sans-serif; 
+$FONT-SUBHEADING: "Exo", sans-serif; 
+
+$COLOR-LIGHT-GRAY: rgb(215, 221, 226); 
+$COLOR-MID-GRAY: rgb(174, 179, 184); 

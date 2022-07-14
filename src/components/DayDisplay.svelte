@@ -13,7 +13,7 @@
 </script>
 
 <div class="day">
-	<h3>Day {dayNumber}</h3>
+	<h3>{week.name} Day {dayNumber}</h3>
 
 	<div class="exercises">
 		{#each dayData.chosenExercises || [] as chosenExerciseId}
@@ -30,7 +30,7 @@
 					{#each week.weightData || [] as weightSet}
 						<tr>
 							<td>{weightSet.mult * 100 + "%"}</td>
-							<td>{mRound(trainingMax[chosenExerciseId] * weightSet.mult)}</td>
+							<td class="weight">{mRound(trainingMax[chosenExerciseId] * weightSet.mult)}</td>
 							<td>{getPlateString(mRound(trainingMax[chosenExerciseId] * weightSet.mult))}</td>
 							<td>{weightSet.sets}</td>
 							<td>{weightSet.reps}</td>
@@ -54,7 +54,7 @@
 	h3 {
 		font-size: 1.2rem;
 		text-align: center;
-		border-bottom: 1px solid $THEME-COLOR;
+		border-bottom: 1px solid BLACK;
 		padding-bottom: 2px;
 		margin-bottom: 4px;
 	}
@@ -63,20 +63,28 @@
 		text-align: center;
 		font-size: 1.1rem;
 		font-weight: bold;
-		margin-bottom: 4px;
+		margin-top: 4px;
+		margin-bottom: 4px
 	}
 
+	
 	table {
 		width: 100%;
 
 		table-layout: fixed;
 
+		border: 1px solid black;
+
 		tr:first-child {
-			border-bottom: 1px solid $THEME-COLOR; 
+			border-bottom: 1px solid BLACK; 
 		}
 
 		tr:nth-child(even) {
 			background: $COLOR-LIGHT-GRAY; 
+		}
+		
+		td.weight {
+			font-weight: bold;
 		}
 
 		th, td {

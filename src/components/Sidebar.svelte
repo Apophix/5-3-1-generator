@@ -174,6 +174,11 @@ import { getContext } from "svelte";
 		}
 
 		border-bottom: 1px solid $THEME-COLOR-BRIGHT; 
+
+		&:last-child {
+			border-bottom: none;
+		}
+
 	}
 
 	.config-items {

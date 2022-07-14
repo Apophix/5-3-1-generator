@@ -13,7 +13,7 @@
 		]),
 		weeks: [
 			{
-				name: "Light Week",
+				name: "Light",
 				weightData: [
 					{ mult: 0.65, sets: 1, reps: 5 },
 					{ mult: 0.75, sets: 1, reps: 5 },
@@ -22,7 +22,7 @@
 				],
 			},
 			{
-				name: "Moderate Week",
+				name: "Moderate",
 				weightData: [
 					{ mult: 0.7, sets: 1, reps: 3 },
 					{ mult: 0.8, sets: 1, reps: 3 },
@@ -31,7 +31,7 @@
 				],
 			},
 			{
-				name: "Heavy Week",
+				name: "Heavy",
 				weightData: [
 					{ mult: 0.75, sets: 1, reps: 5 },
 					{ mult: 0.85, sets: 1, reps: 3 },
@@ -40,7 +40,7 @@
 				],
 			},
 			{
-				name: "Deload Week",
+				name: "Deload",
 				weightData: [
 					{ mult: 0.5, sets: 1, reps: 5 },
 					{ mult: 0.6, sets: 1, reps: 5 },
@@ -66,7 +66,7 @@
 		<Paper bind:config={$sidebarConfig}>
 			{#each globalConfig.weeks as week, weekIndex}
 				<div class="week">
-					<div class="week-header"><h2>{week.name}</h2></div>
+					<!-- <div class="week-header"><h2>{week.name}</h2></div> -->
 					<div class="weekdays">
 						{#each $sidebarConfig.days as day, index}
 							<DayDisplay dayData={day} dayNumber={index + 1} {week} trainingMax={$sidebarConfig.trainingMax} />

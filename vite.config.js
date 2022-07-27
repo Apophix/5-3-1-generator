@@ -24,5 +24,6 @@ export default defineConfig({
     hmr: {
       clientPort: 8006
     }
-  }
+  },
+  base: "/5-3-1-generator"
 })

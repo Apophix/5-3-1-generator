@@ -25,5 +25,5 @@ export default defineConfig({
       clientPort: 8006
     }
   },
-  base: "/5-3-1-generator"
+  base: "/5-3-1-generator/"
 })

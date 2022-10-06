@@ -33,7 +33,7 @@
 							<td class="weight">{mRound(trainingMax[chosenExerciseId] * weightSet.mult)}</td>
 							<td>{getPlateString(mRound(trainingMax[chosenExerciseId] * weightSet.mult))}</td>
 							<td>{weightSet.sets}</td>
-							<td>{weightSet.reps}</td>
+							<td>{weightSet.reps}{#if weightSet.plus}+{/if}</td>
 						</tr>
 					{/each}
 				</table>

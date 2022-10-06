@@ -9,7 +9,8 @@
 		exercises: new Map([
 			["squat", { name: "Squat" }], 
 			["deadlift", { name: "Deadlift" }], 
-			["bench", { name: "Bench" }]
+			["bench", { name: "Bench" }],
+			["overhead", { name: "Overhead Press"}],
 		]),
 		weeks: [
 			{
